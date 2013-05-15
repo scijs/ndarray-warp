@@ -1,0 +1,42 @@
+{
+  "name": "ndarray-warp",
+  "version": "0.0.0",
+  "description": "ndarray image warping",
+  "main": "warp.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {
+    "cwise": "~0.1.2",
+    "ndarray": "~0.2.1",
+    "ndarray-linear-interpolate": "~0.0.0"
+  },
+  "devDependencies": {
+    "tap": "~0.4.2",
+    "luminance": "0.0.0",
+    "lena": "0.0.0",
+    "save-pixels": "0.0.1"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/ndarray-warp.git"
+  },
+  "keywords": [
+    "ndarray",
+    "image",
+    "volume",
+    "warp",
+    "coordinate",
+    "change",
+    "nonlinear",
+    "deform"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "9341ae6b00b0464c0a21aa04fec7eb36ef8c1222"
+}

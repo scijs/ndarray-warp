@@ -11,8 +11,8 @@ require("../warp.js")(result, lena, function(out, inp) {
   var r  = Math.sqrt(dx * dx + dy * dy)
   var theta = Math.atan2(dy, dx)
   
-  out[0] = r * Math.cos(theta + 0.01 * r)
-  out[1] = r * Math.sin(theta + 0.01 * r)
+  out[0] = 0.9 * r * Math.cos(theta + 0.01 * r) + 256
+  out[1] = 0.7 * r * Math.sin(theta + 0.01 * r) + 256
 })
 
 //Save the result
