@@ -30,7 +30,7 @@ require("save-pixels")(result, "png").pipe(process.stdout)
 
 Which produces the following image:
 
-<img src="example/warp.png">
+<img src="https://raw.github.com/mikolalysenko/ndarray-warp/master/example/warp.png">
 
 Install
 =======
