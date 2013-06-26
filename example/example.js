@@ -2,7 +2,7 @@
 var lena = require("luminance")(require("lena"))
 
 //Allocate storage for result
-var result = require("ndarray").zeros([512, 512])
+var result = require("zeros")([512, 512])
 
 //Apply warp
 require("../warp.js")(result, lena, function(out, inp) {

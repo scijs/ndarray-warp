@@ -4,11 +4,11 @@ var interp = require("ndarray-linear-interpolate")
 var cwise = require("cwise")
 
 var do_warp = cwise({
-  args: ["index", "array", "scalar", "scalar"],
-  pre: function(idx) {
-    this.warped = new Array(idx.length)
+  args: ["index", "shape", "array", "scalar", "scalar"],
+  pre: function(idx, s) {
+    this.warped = s.slice(0)
   },
-  body: function(idx, dest, func, interp) {
+  body: function warpND(idx, shape, dest, func, interp) {
     func(this.warped, idx)
     dest = interp.apply(undefined, this.warped)
   }
@@ -19,7 +19,7 @@ var do_warp_1 = cwise({
   pre: function() {
     this.warped = [0]
   },
-  body: function(idx, dest, func, interp, src) {
+  body: function warp1D(idx, dest, func, interp, src) {
     func(this.warped, idx)
     dest = interp(src, this.warped[0])
   }
@@ -30,7 +30,7 @@ var do_warp_2 = cwise({
   pre: function() {
     this.warped = [0, 0]
   },
-  body: function(idx, dest, func, interp, src) {
+  body: function warp2D(idx, dest, func, interp, src) {
     func(this.warped, idx)
     dest = interp(src, this.warped[0], this.warped[1])
   }
@@ -41,7 +41,7 @@ var do_warp_3 = cwise({
   pre: function() {
     this.warped = [0, 0, 0]
   },
-  body: function(idx, dest, func, interp, src) {
+  body: function warp3D(idx, dest, func, interp, src) {
     func(this.warped, idx)
     dest = interp(src, this.warped[0], this.warped[1], this.warped[2])
   }

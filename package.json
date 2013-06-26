@@ -1,6 +1,6 @@
 {
   "name": "ndarray-warp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "ndarray image warping",
   "main": "warp.js",
   "directories": {
@@ -8,15 +8,17 @@
     "test": "test"
   },
   "dependencies": {
-    "cwise": "~0.1.2",
-    "ndarray": "~0.2.1",
-    "ndarray-linear-interpolate": "~0.0.0"
+    "cwise": "~0.3.2",
+    "ndarray-linear-interpolate": "~0.0.1"
   },
   "devDependencies": {
+    "ndarray": "~1.0.0",
     "tap": "~0.4.2",
-    "luminance": "0.0.0",
-    "lena": "0.0.0",
-    "save-pixels": "0.0.1"
+    "luminance": "~1.0.0",
+    "lena": "~1.0.0",
+    "save-pixels": "~0.2.0",
+    "zeros": "~0.0.0",
+    "ndarray-unpack": "~0.0.0"
   },
   "scripts": {
     "test": "tap test/*.js"
