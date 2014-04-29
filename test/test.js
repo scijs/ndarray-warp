@@ -5,7 +5,7 @@ var warp = require("../warp.js")
 var zeros = require("zeros")
 var unpack = require("ndarray-unpack")
 
-require("tap").test("ndarray-warp", function(t) {
+require("tape")("ndarray-warp", function(t) {
 
   var x = zeros([10, 10])
   x.set(5, 5, 1)

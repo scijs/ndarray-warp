@@ -1,6 +1,6 @@
 {
   "name": "ndarray-warp",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "ndarray image warping",
   "main": "warp.js",
   "directories": {
@@ -8,20 +8,20 @@
     "test": "test"
   },
   "dependencies": {
-    "cwise": "~0.4.0",
-    "ndarray-linear-interpolate": "~0.0.2"
+    "cwise": "^1.0.0",
+    "ndarray-linear-interpolate": "^1.0.0"
   },
   "devDependencies": {
     "ndarray": "~1.0.0",
-    "tap": "~0.4.2",
     "luminance": "~1.0.0",
     "lena": "~1.0.0",
     "save-pixels": "~0.2.0",
     "zeros": "~0.0.0",
-    "ndarray-unpack": "~0.0.0"
+    "ndarray-unpack": "~0.0.0",
+    "tape": "^2.12.3"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -40,5 +40,8 @@
   "author": "Mikola Lysenko",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "9341ae6b00b0464c0a21aa04fec7eb36ef8c1222"
+  "gitHead": "9341ae6b00b0464c0a21aa04fec7eb36ef8c1222",
+  "browserify": {
+    "transform": [ "cwise" ]
+  }
 }
