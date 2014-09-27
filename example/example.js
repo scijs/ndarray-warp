@@ -1,6 +1,8 @@
 //Load input image
 var lena = require("luminance")(require("lena"))
 
+var imshow = require("ndarray-imshow")
+
 //Allocate storage for result
 var result = require("zeros")([512, 512])
 
@@ -16,4 +18,4 @@ require("../warp.js")(result, lena, function(out, inp) {
 })
 
 //Save the result
-require("save-pixels")(result, "png").pipe(process.stdout)
+imshow(result)

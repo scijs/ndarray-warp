@@ -1,10 +1,10 @@
-"use strict"
+'use strict'
 
-var interp = require("ndarray-linear-interpolate")
-var cwise = require("cwise")
+var interp  = require('ndarray-linear-interpolate')
+var cwise   = require('cwise')
 
 var do_warp = cwise({
-  args: ["index", "array", "scalar", "scalar", "scalar"],
+  args: ['index', 'array', 'scalar', 'scalar', 'scalar'],
   pre: function(idx, dest, func, interp, n) {
     this.warped = new Array(n)
   },
@@ -15,7 +15,7 @@ var do_warp = cwise({
 })
 
 var do_warp_1 = cwise({
-  args: ["index", "array", "scalar", "scalar", "scalar"],
+  args: ['index', 'array', 'scalar', 'scalar', 'scalar'],
   pre: function() {
     this.warped = [0]
   },
@@ -26,7 +26,7 @@ var do_warp_1 = cwise({
 })
 
 var do_warp_2 = cwise({
-  args: ["index", "array", "scalar", "scalar", "scalar"],
+  args: ['index', 'array', 'scalar', 'scalar', 'scalar'],
   pre: function() {
     this.warped = [0, 0]
   },
@@ -37,7 +37,7 @@ var do_warp_2 = cwise({
 })
 
 var do_warp_3 = cwise({
-  args: ["index", "array", "scalar", "scalar", "scalar"],
+  args: ['index', 'array', 'scalar', 'scalar', 'scalar'],
   pre: function() {
     this.warped = [0, 0, 0]
   },
